@@ -36,6 +36,6 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')))
 
 app.use(require('./routes'))
 
-server.listen(3999, () => {
+server.listen(process.env.PORT || 3333, () => {
   console.log('Servidor startado afavor')
 })
